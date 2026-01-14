@@ -5,9 +5,10 @@ from src.kadane import kadane
 from src.visualize import plot_stock_analysis
 
 #yahoo finance inputs 
-symbol = "AAPL" #Apple stock 
-start_date = "2025-01-13"
-end_date = "2026-01-13"
+symbol = input("Enter stock symbol (e.g: AAPL):").upper()
+start_date = input("Enter start Date (YYYY-MM-DD):")
+end_date = input("Enter the End Date (YYYY-MM-DD):")
+
 
 prices ,dates = load_prices_from_yahoo(symbol , start_date , end_date)
 changes = calculate_daily_changes(prices)
