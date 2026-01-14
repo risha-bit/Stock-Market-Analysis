@@ -13,3 +13,8 @@ possible from stock price movements.
 - Streamlit
 - Pandas
 - matplotlib
+- yahoo finance
+
+##how to run this ?  
+
+venv/bin/streamlit run app.py

@@ -1,18 +1,17 @@
 import matplotlib.pyplot as plt 
-def plot_stock_analysis(prices , dates , buy_day , sell_day , symbol):
-    plt.figure(figsize=(12,6))
+import streamlit as st
 
-    # stock price line 
-    plt.plot(dates , prices , label = "Stock Prices ")
+def plot_stock_analysis(prices , dates  , buy_day , sell_day , symbol):
+    fig, ax =plt.subplots(figsize =(10,5))
 
-    # buy & sell points 
-    plt.scatter(dates[buy_day] , prices[buy_day] , color="green" , s=100 , label ="Buy")
-    plt.scatter(dates[sell_day] , prices[sell_day] , color = "red" , s=100 , label ="Sell")
+    ax.plot(dates , prices , label ="Stock Price")
+    ax.scatter(dates[buy_day] , prices[buy_day] , color="green" , label="Buy")
+    ax.scatter(dates[sell_day] , prices[sell_day] , color="red" , label ="Sell")
 
-    # Labels & Title 
-    plt.title(f"{symbol} ,  STOCK PRIZE ANALYSIS")
-    plt.xlabel("Date")
-    plt.ylabel("Price")
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+    ax.set_title(f"{symbol} Stock Price Analysis")
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Price")
+    ax.legend()
+    ax.grid(True)
+
+    st.pyplot(fig)

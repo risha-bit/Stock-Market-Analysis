@@ -1,16 +1,20 @@
-def kadane(arr):
-    max_current = max_global = arr[0]
-    start = end = s = 0
+def kadane(prices):
+    max_profit =0
+    current_profit =0
+    buy = sell = temp_buy =0
+    
+    for i in range(1, len(prices)):
+        diff =prices[i] - prices[i-1]
 
-    for i in range(1, len(arr)):
-        if arr[i] > max_current + arr[i]:
-            max_current = arr[i]
-            s = i
-        else :
-            max_current += arr[i]
+        if current_profit  + diff > 0:
+            current_profit += diff
+        else:
+            current_profit =0
+            temp_buy = i
 
-        if max_current > max_global:
-            max_global = max_current
-            start = s
-            end = i
-    return max_global , start , end  
+        if current_profit > max_profit :
+            max_profit = current_profit 
+            buy = temp_buy
+            sell =i
+    return max_profit , buy , sell 
+
