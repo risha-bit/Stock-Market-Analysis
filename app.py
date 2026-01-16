@@ -17,7 +17,7 @@ st.write(" Use **kadane's Algorithm** to find the optimal Buy & Sell points")
 symbol = st.text_input("Enter Stock Symbol:", value = "AAPL").upper()
 st.caption("Examples : AAPL , TSLA , MSFT , INFY.NS ,TCS.NS, RELIANCE.NS")
 
-start_date = st.date_input("start Date :" , date(2023,1,1))
+Start_date = st.date_input("start Date :" , date(2023,1,1))
 end_date = st.date_input("End Date :", date.today() )
 #-----------Analysis Button --------------------
 if st.button ("Analysis Stock "):
