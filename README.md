@@ -1,20 +1,25 @@
-## Stock Market Analysis using Kadane's Algorithm
+# Stock Market Profit Analysis using Kadane’s Algorithm
 
-This project applies Kadane’s Algorithm to find the maximum profit
-possible from stock price movements.
+A Python-based stock market analysis project that applies **Kadane’s Algorithm** to determine the **maximum possible profit** from historical stock price movements.  
+The project is deployed as an interactive **web application using Streamlit**
 
-## Feature 
-- CSV upload 
-- Profit Calculation 
-- Stock Price Calculation
+---
 
-### Tech Stack
-- Python
-- Streamlit
-- Pandas
-- matplotlib
-- yahoo finance
+##  Project Overview
 
-##how to run this ?  
+In stock trading, identifying the best time to buy and sell is crucial.  
+This project models stock price fluctuations as a **maximum subarray sum problem**, where:
 
-venv/bin/streamlit run app.py
+- Daily price differences represent profit/loss
+- Kadane’s Algorithm efficiently finds the most profitable continuous window
+
+The result is a fast and optimal stock profit analyzer.
+---
+
+## 🛠️ Tech Stack
+
+- **Python**
+- **Streamlit** 
+- **Pandas** 
+- **Kadane’s Algorithm** 
+- **Yahoo Finance**s
