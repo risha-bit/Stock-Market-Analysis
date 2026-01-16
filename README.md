@@ -22,4 +22,5 @@ The result is a fast and optimal stock profit analyzer.
 - **Streamlit** 
 - **Pandas** 
 - **Kadane’s Algorithm** 
-- **Yahoo Finance**s
+- **Yahoo Finance**
+- **Matplotlib**
