@@ -16,7 +16,7 @@ This project models stock price fluctuations as a **maximum subarray sum problem
 The result is a fast and optimal stock profit analyzer.
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python**
 - **Streamlit** 
